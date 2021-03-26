@@ -1,0 +1,188 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+html body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+html body .wrapper {
+  background-color: #1877F2;
+  height: 100%;
+}
+
+html body .wrapper .main-body {
+  height: 100%;
+}
+
+html body .wrapper .main-body .body-content {
+  height: 100%;
+}
+
+html body .wrapper .main-body .body-content .tab-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+html body .wrapper .main-body .body-content .tab-content .page-one {
+  background-color: #f8f8f8;
+  height: 100%;
+  width: 64%;
+}
+
+html body .wrapper .main-body .body-content .tab-content .page-one .steps-div {
+  text-align: right;
+  padding-right: 2em;
+  padding-top: 1.3em;
+}
+
+html body .wrapper .main-body .body-content .tab-content .page-one .steps-div .steps-text {
+  font-size: 9px;
+  margin-right: 1.5em;
+  font-weight: bold;
+}
+
+html body .wrapper .main-body .body-content .tab-content .page-one .steps-div .circle.black {
+  background-color: #000;
+}
+
+html body .wrapper .main-body .body-content .tab-content .page-one .steps-div .circle {
+  border: 1px solid #888;
+  border-radius: 50%;
+  padding: 0.5px;
+  width: 1px;
+  height: 1px;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+html body .wrapper .main-body .body-content .tab-content .page-one .content-div {
+  width: 41%;
+  margin: 0 auto;
+  padding-top: 14%;
+}
+
+html body .wrapper .main-body .body-content .tab-content .page-one .content-div .main-heading {
+  margin-top: 0;
+  letter-spacing: 1px;
+  color: #1B1B1B;
+}
+
+html body .wrapper .main-body .body-content .tab-content .page-one .content-div .ask-account {
+  font-size: 11px;
+}
+
+html body .wrapper .main-body .body-content .tab-content .page-one .content-div p {
+  font-size: 11px;
+  margin: 10% 0 8%;
+  margin-bottom: 8%;
+}
+
+html body .wrapper .main-body .body-content .tab-content .page-one .content-div a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #1877F2;
+}
+
+html body .wrapper .main-body .body-content .tab-content .page-one .content-div .signin-form {
+  width: 100%;
+}
+
+html body .wrapper .main-body .body-content .tab-content .page-one .content-div .signin-form ::-webkit-input-placeholder {
+  font-size: 11px;
+}
+
+html body .wrapper .main-body .body-content .tab-content .page-one .content-div .signin-form .form-input {
+  border: 1px solid #eee;
+  width: 100%;
+  padding: 10px;
+  margin: 7px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 2px;
+  background-color: #f8f8f8;
+}
+
+html body .wrapper .main-body .body-content .tab-content .page-one .content-div .signin-form .email-error {
+  display: none;
+}
+
+html body .wrapper .main-body .body-content .tab-content .page-one .content-div .signin-form .visible {
+  font-size: 9px;
+  color: red;
+  display: block;
+}
+
+html body .wrapper .main-body .body-content .tab-content .page-one .content-div .signin-form .invalid {
+  border: 1px solid red;
+}
+
+html body .wrapper .main-body .body-content .tab-content .page-one .content-div .signin-form .form-input.selector {
+  color: #838181;
+  font-size: 11px;
+}
+
+html body .wrapper .main-body .body-content .tab-content .page-one .content-div .signin-form .pass-span {
+  float: right;
+  position: relative;
+  top: -2.1rem;
+  left: -0.3rem;
+  font-size: 12px;
+  color: #444;
+}
+
+html body .wrapper .main-body .body-content .tab-content .page-one .content-div .signin-form .char-size {
+  font-size: 9px;
+  color: #999;
+}
+
+html body .wrapper .main-body .body-content .tab-content .page-one .content-div .signin-form .signin-btn {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  margin-top: 10px;
+  font-size: 10px;
+  color: #aaa;
+}
+
+html body .wrapper .main-body .body-content .tab-content .page-one .content-div .signin-form .valid-form {
+  color: #fff;
+  background-color: #1877F2;
+}
+
+html body .wrapper .main-body .body-content .tab-content .page-one .content-div .signin-form .policy-claim {
+  font-size: 10px;
+  line-height: 19px;
+}
+
+html body .wrapper .main-body .body-content .tab-content .dummy-sect {
+  width: 35%;
+}
+
+html body .wrapper .main-body .body-content .tab-content .dummy-sect .dummy-wrap {
+  margin: 0 auto;
+  padding-top: 65%;
+  color: #fff;
+  width: 61%;
+}
+
+html body .wrapper .main-body .body-content .tab-content .dummy-sect .dummy-wrap h2 {
+  text-align: center;
+}
+
+html body .wrapper .main-body .body-content .tab-content .dummy-sect .dummy-wrap p {
+  margin-top: 20%;
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 24px;
+  width: 89%;
+}
+/*# sourceMappingURL=index.css.map */
