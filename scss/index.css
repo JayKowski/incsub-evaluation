@@ -179,7 +179,7 @@ html body .wrapper .main-body .body-content .tab-content .dummy-sect .dummy-wrap
 }
 
 html body .wrapper .main-body .body-content .tab-content .dummy-sect .dummy-wrap p {
-  margin-top: 20%;
+  margin: 20% auto 0;
   font-size: 12px;
   letter-spacing: 1px;
   line-height: 24px;
