@@ -37,9 +37,17 @@ function formPage() {
     option2.setAttribute('value', 'Developer');
     const option3 = elementFactory('option', '', 'Administrator');
     option3.setAttribute('value', 'Administrator');
-    const passwordInput = inputFactory('passowrd', 'Password', 'password');
+    const passwordInput = inputFactory('password', 'Password', 'password');
     const revealPass = elementFactory('span', 'pass-span');
-    revealPass.innerHTML = icon({ prefix: 'fas', iconName: 'eye' }).html;
+    revealPass.innerHTML = icon({ prefix: 'fas', iconName: 'eye-slash' }).html;
+
+        //form labels
+    const nameLabel = elementFactory('label', 'form-label', 'Your Name');
+    nameLabel.setAttribute('for', 'name')
+    const emailLabel = elementFactory('label', 'form-label', 'Email address');
+    emailLabel.setAttribute('for', 'email')
+    const passLabel = elementFactory('label', 'form-label', 'Password');
+    passLabel.setAttribute('for', 'password');
     
         //form input breaks
     const brk1 = elementFactory('br');
@@ -73,8 +81,10 @@ function formPage() {
     prompt.appendChild(signInLink);
     contentDiv.appendChild(form);
     //append form elements
+    form.appendChild(nameLabel);
     form.appendChild(nameInput);
     form.appendChild(brk1);
+    form.appendChild(emailLabel);
     form.appendChild(emailInput);
     form.appendChild(emailError);
     form.appendChild(brk2);
@@ -83,6 +93,7 @@ function formPage() {
     userTypeSelect.appendChild(option2);
     userTypeSelect.appendChild(option3);
     form.appendChild(brk3);
+    form.appendChild(passLabel)
     form.appendChild(passwordInput);
     form.appendChild(revealPass);
     form.appendChild(brk4);
@@ -116,20 +127,56 @@ function formPage() {
             }
         };
     });
+    
+    let toggled = false;
 
     form.addEventListener('change', e => {
+        const targ = e.target;
+        const fieldAtt = targ.getAttribute('name');
+        const label = document.querySelector(`label[for=${fieldAtt}]`);
+
+        if(targ.value === '' && toggled) {
+            label.classList.remove("show");
+            console.log(targ.value);
+            targ.setAttribute('placeholder', `${label.innerHTML}`);
+            toggled = false;
+        }
+        console.log(e.target, " target");
+    });
+
+    form.addEventListener('keyup', e => {
         const REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         const field  = e.target;
         const evalBool = REGEX.test(field.value.toString());
+        const fieldAtt = field.getAttribute('name');
+        const label = document.querySelector(`label[for=${fieldAtt}]`);
+
         if(form.elements[1] === field){
             if(!evalBool) {
                 e.target.classList.add("invalid");
                 emailError.classList.add("visible");
+                label.classList.add("invalid-email");
             } else if (evalBool){
                 e.target.classList.remove("invalid");
                 emailError.classList.remove("visible");
+                label.classList.remove("invalid-email")
             }
         }
+
+
+        if(field.value.length > 0 || field === document.activeElement && !toggled) {
+            field.removeAttribute('placeholder');
+            label.classList.add("show");
+            console.log(label, " in focus");
+            toggled = true;
+            // console.log(fieldAtt, nodeName);
+        } /* else if (field.value === '' && toggled) {
+            label.classList.remove("show");
+            console.log(field.value);
+            toggled = false;
+        } */
+
+
         //grab field values to pass to validate() for evaluation;
         const name = form.elements[0];
         const email = REGEX.test(form.elements[1].value.toString());
@@ -141,6 +188,7 @@ function formPage() {
         const nextBtn = document.querySelector('.signin-btn');
         pass ? nextBtn.classList.add("valid-form") : nextBtn.classList.remove("valid-form");
     });
+
 }
 
 export default formPage

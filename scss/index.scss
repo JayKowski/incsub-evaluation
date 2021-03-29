@@ -74,6 +74,23 @@ html {
                                     ::-webkit-input-placeholder {
                                         font-size: 11px;
                                     }
+                                    .form-label {
+                                        z-index: 2;
+                                        float: left;
+                                        /* height: 10px; */
+                                        /* line-height: 10px; */
+                                        position: relative;
+                                        padding: 0px 5px;
+                                        left: 14px;
+                                        top: 14px;
+                                        color: #999;
+                                        background-color: #f8f8f8;
+                                        font-size: 11px;
+                                        display: none;
+                                    }
+                                    .show {
+                                        display: block;
+                                    }
                                     .form-input {
                                         border: 1px solid #eee;
                                         width: 100%;
@@ -90,6 +107,9 @@ html {
                                         font-size: 9px;
                                         color: red;
                                         display: block;
+                                    }
+                                    .invalid-email {
+                                        color: red;
                                     }
                                     .invalid {
                                         border: 1px solid red;

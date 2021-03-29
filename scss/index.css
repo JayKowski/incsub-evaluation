@@ -99,6 +99,25 @@ html body .wrapper .main-body .body-content .tab-content .page-one .content-div 
   font-size: 11px;
 }
 
+html body .wrapper .main-body .body-content .tab-content .page-one .content-div .signin-form .form-label {
+  z-index: 2;
+  float: left;
+  /* height: 10px; */
+  /* line-height: 10px; */
+  position: relative;
+  padding: 0px 5px;
+  left: 14px;
+  top: 14px;
+  color: #999;
+  background-color: #f8f8f8;
+  font-size: 11px;
+  display: none;
+}
+
+html body .wrapper .main-body .body-content .tab-content .page-one .content-div .signin-form .show {
+  display: block;
+}
+
 html body .wrapper .main-body .body-content .tab-content .page-one .content-div .signin-form .form-input {
   border: 1px solid #eee;
   width: 100%;
@@ -118,6 +137,10 @@ html body .wrapper .main-body .body-content .tab-content .page-one .content-div 
   font-size: 9px;
   color: red;
   display: block;
+}
+
+html body .wrapper .main-body .body-content .tab-content .page-one .content-div .signin-form .invalid-email {
+  color: red;
 }
 
 html body .wrapper .main-body .body-content .tab-content .page-one .content-div .signin-form .invalid {
