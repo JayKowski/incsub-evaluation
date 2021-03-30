@@ -137,11 +137,9 @@ function formPage() {
 
         if(targ.value === '' && toggled) {
             label.classList.remove("show");
-            console.log(targ.value);
             targ.setAttribute('placeholder', `${label.innerHTML}`);
             toggled = false;
         }
-        console.log(e.target, " target");
     });
 
     form.addEventListener('keyup', e => {
@@ -163,19 +161,11 @@ function formPage() {
             }
         }
 
-
         if(field.value.length > 0 || field === document.activeElement && !toggled) {
             field.removeAttribute('placeholder');
             label.classList.add("show");
-            console.log(label, " in focus");
             toggled = true;
-            // console.log(fieldAtt, nodeName);
-        } /* else if (field.value === '' && toggled) {
-            label.classList.remove("show");
-            console.log(field.value);
-            toggled = false;
-        } */
-
+        } 
 
         //grab field values to pass to validate() for evaluation;
         const name = form.elements[0];
